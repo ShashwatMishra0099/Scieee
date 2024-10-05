@@ -1,3 +1,20 @@
+// Function to handle form validation on the Match Details page
+document.getElementById('match-form')?.addEventListener('input', function() {
+    // Get all input fields
+    const team1 = document.getElementById('team1').value.trim();
+    const team2 = document.getElementById('team2').value.trim();
+    const overs = document.getElementById('overs').value.trim();
+    const wickets = document.getElementById('wickets').value.trim();
+    const matchTime = document.getElementById('match-time').value.trim();
+
+    // Check if all fields are filled
+    if (team1 && team2 && overs && wickets && matchTime) {
+        document.getElementById('play-match-btn').disabled = false;
+    } else {
+        document.getElementById('play-match-btn').disabled = true;
+    }
+});
+
 // Variables to track score, wickets, overs, balls, and extras
 let score = 0;
 let wickets = 0;
@@ -69,7 +86,3 @@ function selectBatsman() {
 function selectBowler() {
     alert("Select Bowler logic to be implemented");
 }
-
-// Function to handle form validation on the Match Details page
-document.getElementById('match-form')?.addEventListener('input', function() {
-    const isFormFilled = Array.from(this.elements).every(input => input.value.trim() !== '');
