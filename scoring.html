@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Scoring - Score</title>
+    <title>Live Scoring</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="scoring-container">
-        <div class="score-display">
-            <h1 id="score">0-0</h1>
-            <p>Extras - 0 | Overs - 0.0 | CRR - 0.0</p>
+    <header>
+        <div class="scoreboard">
+            <div id="team1-name">Team 1</div>
+            <div id="score">0/0</div>
+            <div id="overs">0.0 overs</div>
+            <div id="run-rate">Run Rate: 0.0</div>
         </div>
-        <div class="select-players">
-            <button class="select-player-btn" onclick="selectBatsman()">Select Batsman</button>
-            <button class="select-player-btn" onclick="selectBowler()">Select Bowler</button>
+    </header>
+
+    <main>
+        <!-- Current Batsmen and Bowler Stats -->
+        <section id="batsmen">
+            <div id="striker">Striker: <span id="striker-name"></span> - <span id="striker-runs"></span></div>
+            <div id="non-striker">Non-Striker: <span id="non-striker-name"></span> - <span id="non-striker-runs"></span></div>
+            <div id="bowler">Bowler: <span id="bowler-name"></span> - <span id="bowler-stats"></span></div>
+        </section>
+
+        <!-- Scoring Panel -->
+        <section class="scoring-panel">
+            <button onclick="addRun(0)">0</button>
+            <button onclick="addRun(1)">1</button>
+            <button onclick="addRun(2)">2</button>
+            <button onclick="addRun(3)">3</button>
+            <button onclick="addRun(4)">4</button>
+            <button onclick="addRun(6)">6</button>
+            <button onclick="addExtra('wide')">Wide</button>
+            <button onclick="addExtra('no-ball')">No Ball</button>
+            <button onclick="addWicket()">Wicket</button>
+        </section>
+
+        <!-- Sliding Scorecard -->
+        <div id="scorecard">
+            <!-- Scorecard details will be shown here -->
         </div>
-        <div class="score-controls">
-            <div class="runs-section">
-                <button onclick="addRuns(0)">0</button>
-                <button onclick="addRuns(1)">1</button>
-                <button onclick="addRuns(2)">2</button>
-                <button onclick="addRuns(3)">3</button>
-                <button onclick="addRuns(4)">4</button>
-            </div>
-            <div class="runs-section">
-                <button onclick="addRuns(5)">5</button>
-                <button onclick="addRuns(6)">6</button>
-                <button onclick="recordWide()">Wide</button>
-                <button onclick="recordOut()">Out</button>
-                <button onclick="recordNoBall()">NB</button>
-            </div>
-            <div class="undo-section">
-                <button onclick="undo()">UNDO</button>
-            </div>
+
+        <!-- Summary Section -->
+        <div id="summary">
+            <h3>Match Summary</h3>
+            <p id="required-run-rate">Required Run Rate: 0.0</p>
+            <p id="key-stats">Key Statistics</p>
         </div>
-    </div>
-    <script src="script.js" defer></script>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
