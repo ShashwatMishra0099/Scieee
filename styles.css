@@ -1,0 +1,138 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Home page styles */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.start-box {
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.start-btn {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Match details page styles */
+.match-details-container {
+    padding: 20px;
+    background-color: white;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.play-match-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.play-match-btn:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+/* Scoring page styles */
+.scoring-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.score-display h1, .score-display h2 {
+    margin: 5px 0;
+}
+
+.score-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.runs-section button, .undo-section button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.runs-section button:hover, .undo-section button:hover {
+    background-color: #555;
+}
+
+/* Select players section */
+.select-players {
+    margin: 20px 0;
+}
+
+.select-player-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.select-player-btn:hover {
+    background-color: darkorange;
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+    .scoring-container {
+        padding: 10px;
+    }
+    
+    .runs-section button, .undo-section button {
+        padding: 5px;
+        margin: 3px;
+    }
+    
+    .start-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
