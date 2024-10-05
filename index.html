@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Scoring - Home</title>
+    <title>Cricket Scoring Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="home-container">
-        <div class="start-box">
-            <button class="start-btn" onclick="location.href='match-details.html'">Start Match</button>
-        </div>
-    </div>
+    <header>
+        <h1>Welcome to Cricket Scoring</h1>
+        <p>Score your cricket matches with ease!</p>
+        <button onclick="startMatch()">Start New Match</button>
+        <button onclick="viewPreviousMatches()">View Previous Matches</button>
+    </header>
+
+    <script src="app.js"></script>
 </body>
 </html>
