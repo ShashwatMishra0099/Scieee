@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Scoring - Score</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scoring-container">
+        <div class="score-display">
+            <h1 id="score">0-0</h1>
+            <p>Extras - 0 | Overs - 0.0 | CRR - 0.0</p>
+        </div>
+        <div class="select-players">
+            <button class="select-player-btn" onclick="selectBatsman()">Select Batsman</button>
+            <button class="select-player-btn" onclick="selectBowler()">Select Bowler</button>
+        </div>
+        <div class="score-controls">
+            <div class="runs-section">
+                <button onclick="addRuns(0)">0</button>
+                <button onclick="addRuns(1)">1</button>
+                <button onclick="addRuns(2)">2</button>
+                <button onclick="addRuns(3)">3</button>
+                <button onclick="addRuns(4)">4</button>
+            </div>
+            <div class="runs-section">
+                <button onclick="addRuns(5)">5</button>
+                <button onclick="addRuns(6)">6</button>
+                <button onclick="recordWide()">Wide</button>
+                <button onclick="recordOut()">Out</button>
+                <button onclick="recordNoBall()">NB</button>
+            </div>
+            <div class="undo-section">
+                <button onclick="undo()">UNDO</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
