@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Scoring - Match Details</title>
+    <title>Match Details</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="match-details-container">
-        <form id="match-form">
+    <header>
+        <h2>Enter Match Details</h2>
+    </header>
+    <main>
+        <form id="match-details-form">
             <label for="team1">Team 1 Name:</label>
-            <input type="text" id="team1" name="team1" required>
-
+            <input type="text" id="team1" required>
             <label for="team2">Team 2 Name:</label>
-            <input type="text" id="team2" name="team2" required>
+            <input type="text" id="team2" required>
 
-            <label for="overs">Number of Overs:</label>
-            <input type="number" id="overs" name="overs" required>
+            <label for="overs">Match Format:</label>
+            <select id="overs">
+                <option value="20">20 Overs</option>
+                <option value="50">50 Overs</option>
+                <option value="custom">Custom</option>
+            </select>
 
-            <label for="wickets">Number of Wickets:</label>
-            <input type="number" id="wickets" name="wickets" required>
+            <label for="toss">Toss Result:</label>
+            <select id="toss">
+                <option value="team1">Team 1</option>
+                <option value="team2">Team 2</option>
+            </select>
 
-            <label for="match-time">Match Start Time:</label>
-            <input type="time" id="match-time" name="match-time" required>
+            <label for="decision">Decision:</label>
+            <select id="decision">
+                <option value="bat">Batting</option>
+                <option value="bowl">Bowling</option>
+            </select>
 
-            <button type="button" class="play-match-btn" id="play-match-btn" disabled onclick="location.href='scoring.html'">Play Match</button>
+            <!-- Select Playing XI -->
+            <div id="team-selection">
+                <h3>Select Playing XI</h3>
+                <!-- Add player selection components -->
+            </div>
+
+            <button type="submit">Proceed to Scoring</button>
         </form>
-    </div>
-    <script src="script.js" defer></script>
+    </main>
+
+    <script src="app.js"></script>
 </body>
 </html>
